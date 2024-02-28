@@ -1,0 +1,82 @@
+<html>
+<head>
+
+    <style>
+        body {
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            background-color: #3498db;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .tile {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #333333;
+            border-radius: 10px;
+            margin: 10px;
+            font-size: 36px;
+            text-align: center;
+            line-height: 200px;
+            text-decoration: none;
+            color: #fff;
+            overflow: hidden;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            background-color: #e74c3c;
+            animation: rainbow 2s infinite alternate;
+        }
+
+        .tile:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+            color: #333333;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-color: #e74c3c;
+            }
+            100% {
+                background-color: #2ecc71;
+            }
+        }
+
+        .tile:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>සාධන පරීක්ෂණ ලකුණු ඇතුළත්  කිරීම</h1>
+    <h2 align="center"> කලාප අධ්‍යාපන කාර්යාලය - තණමල්විල</h2>
+    <div class="container">
+        <a href="https://forms.gle/TcARNTKAsR6uwT376" class="tile">Grade 2</a>
+        <a href="https://forms.gle/RWcD3p1SnUsVu1Mk8" class="tile">Grade 4</a>
+        <a href="https://forms.gle/yWvU7JEd1nHYWQc58" class="tile">Grade 9</a>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
