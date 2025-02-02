@@ -1,82 +1,161 @@
-<html>
+<!DOCTYPE html>
+<html lang="si">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>සාධන පරීක්ෂණ ලකුණු ඇතුළත් කිරීම</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            background-color: #ecf0f1;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            min-height: 100vh;
         }
 
         h1 {
             text-align: center;
-            font-family: Arial, sans-serif;
-            color: #333333;
-            background-color: #3498db;
-            padding: 20px;
-            margin: 0;
+            color: #fff;
+            padding: 30px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 20px 0;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 2px;
         }
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .tile {
             position: relative;
-            width: 200px;
-            height: 200px;
-            border: 5px solid #333333;
-            border-radius: 10px;
-            margin: 10px;
-            font-size: 36px;
-            text-align: center;
-            line-height: 200px;
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-decoration: none;
-            color: #fff;
+            color: white;
             overflow: hidden;
-            transition: background-color 0.3s, transform 0.3s, color 0.3s;
-            background-color: #e74c3c;
-            animation: rainbow 2s infinite alternate;
+            transition: transform 0.3s ease;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tile:nth-child(2) {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+
+        .tile:nth-child(3) {
+            background: linear-gradient(45deg, #3498db, #2980b9);
         }
 
         .tile:hover {
-            background-color: #2ecc71;
-            transform: scale(1.1);
-            color: #333333;
+            transform: translateY(-10px) scale(1.05);
         }
 
-        @keyframes rainbow {
-            0% {
-                background-color: #e74c3c;
-            }
-            100% {
-                background-color: #2ecc71;
-            }
-        }
-
-        .tile:before {
+        .tile::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-            pointer-events: none;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .tile:hover::before {
+            left: 100%;
+        }
+
+        .tile i {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .tile span {
+            font-size: 2rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .tile {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>සාධන පරීක්ෂණ ලකුණු ඇතුළත්  කිරීම</h1>
-    <h2 align="center"> කලාප අධ්‍යාපන කාර්යාලය - තණමල්විල</h2>
+    <h1>සාධන පරීක්ෂණ ලකුණු ඇතුළත් කිරීම</h1>
+    <h2>කලාප අධ්‍යාපන කාර්යාලය - තණමල්විල</h2>
     <div class="container">
-        <a href="https://forms.gle/TcARNTKAsR6uwT376" class="tile">Grade 2</a>
-        <a href="https://forms.gle/RWcD3p1SnUsVu1Mk8" class="tile">Grade 4</a>
-        <a href="https://forms.gle/yWvU7JEd1nHYWQc58" class="tile">Grade 9</a>
+        <a href="https://forms.gle/TcARNTKAsR6uwT376" class="tile">
+            <i class="fas fa-book-open"></i>
+            <span>Grade 2</span>
+        </a>
+        <a href="https://forms.gle/RWcD3p1SnUsVu1Mk8" class="tile">
+            <i class="fas fa-book"></i>
+            <span>Grade 4</span>
+        </a>
+        <a href="https://forms.gle/yWvU7JEd1nHYWQc58" class="tile">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Grade 9</span>
+        </a>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
